@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Shit_application
+{
+    class Program
+    {
+        int beginInt = 0;
+
+
+
+        public static ConsoleColor getColor(int colorID)
+        {
+            switch (colorID)
+            {
+                case 0:
+                    return ConsoleColor.Black;
+                case 1:
+                    return ConsoleColor.Blue;
+                case 2:
+                    return ConsoleColor.Cyan;
+                case 3:
+                    return ConsoleColor.DarkBlue;
+                case 4:
+                    return ConsoleColor.DarkCyan;
+                case 5:
+                    return ConsoleColor.DarkGray;
+                case 6:
+                    return ConsoleColor.DarkGreen;
+                case 7:
+                    return ConsoleColor.DarkMagenta;
+                case 8:
+                    return ConsoleColor.DarkRed;
+                case 9:
+                    return ConsoleColor.DarkYellow;
+                case 10:
+                    return ConsoleColor.Gray;
+                case 11:
+                    return ConsoleColor.Green;
+                case 12:
+                    return ConsoleColor.Magenta;
+                case 13:
+                    return ConsoleColor.Red;
+                case 14:
+                    return ConsoleColor.White;
+                case 15:
+                    return ConsoleColor.Yellow;
+            }
+            return ConsoleColor.Black;
+        }
+
+        static void Main(string[] args)
+        {
+            
+
+            
+
+
+            Thread _Thread1 = new Thread(new ThreadStart(bullshit));
+            Thread _Thread2 = new Thread(new ThreadStart(bullshit2));
+            Thread _Thread3 = new Thread(new ThreadStart(bullshit3));
+            _Thread1.Start();
+            _Thread2.Start();
+            _Thread3.Start();
+            Console.ReadKey();
+            _Thread3.Abort();
+            _Thread2.Abort();
+            _Thread1.Abort();
+            Console.ResetColor();
+            Console.Clear();
+            Console.WriteLine("ADIOS AMIGOS! :DD");
+            Console.ReadKey();
+            Environment.Exit(0);
+        }
+
+        static void bullshit3()
+        {
+            Random _random = new Random();
+            Random _random2 = new Random();
+
+
+            while (true)
+            {
+                _random = new Random();
+                _random2 = new Random();
+                Console.ForegroundColor = getColor(_random2.Next(0, 15));
+                Console.BackgroundColor = getColor(_random.Next(0, 15));
+                Thread.Sleep(100);
+                Console.Clear();
+            }
+
+        }
+
+        static void bullshit2()
+        {
+
+        }
+
+        static void bullshit()
+        {
+            int INITINT = 0;
+            for (int i = 1; i > 0; i++)
+            {
+                Console.WriteLine(i.ToString());
+                Thread.Sleep(500);
+            }
+
+        }
+    }
+}
