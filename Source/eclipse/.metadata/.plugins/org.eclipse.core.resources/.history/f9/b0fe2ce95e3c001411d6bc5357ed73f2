@@ -1,0 +1,82 @@
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+import static org.lwjgl.opengl.GL11.*;
+
+
+
+public class GL_Game 
+{
+	//PROGRAM MAIN VOID.
+	public static void main(String[] args)
+	{
+		initScr();
+		initGL();
+		gameLoop();
+		trashRemove();
+	}
+	
+	
+	
+	
+	//Remove Trash.
+	private static void trashRemove() 
+	{
+		
+	}
+
+	
+	//Initiate OpenGL.
+	private static void initGL() 
+	{
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		glOrtho(0,Display.getWidth(), 0, Display.getHeight(), 2, -1);
+		glMatrixMode(GL_MODELVIEW);
+		
+		glClearColor(0,0,0,1);
+		
+		glDisable(GL_DEPTH_TEST);
+	}
+
+	//Prepare screen.
+	private static void initScr()
+	{
+		try
+		{
+			Display.setDisplayMode(new DisplayMode(500,500));
+			Display.setResizable(true);
+			Display.create();
+		}
+		catch (LWJGLException ex)
+		{
+			Logger.getLogger(GL_Game.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	
+	//The game loop.
+	private static void gameLoop()
+	{
+		while(!Display.isCloseRequested())
+		{
+			glClear(GL_COLOR_BUFFER_BIT);
+			
+			glColor3f(0.203f, 0.202f, 0.440f);
+			
+			glBegin(GL_QUADS);
+			{
+				glVertex2f(0,0);
+				glVertex2f(0,25);
+				glVertex2f(25,25);
+				glVertex2f(25,0);
+			}
+			glEnd();
+			
+			Display.update();
+		}		
+	}
+}
