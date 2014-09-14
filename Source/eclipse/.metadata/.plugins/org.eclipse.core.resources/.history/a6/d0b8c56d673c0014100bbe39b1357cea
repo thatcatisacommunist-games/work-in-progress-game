@@ -46,7 +46,7 @@ public class GL_Game
 		
 		glClearColor(0,0,0,1);
 		
-		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Sucessfully loaded OpenGL libraries....", "info.openGL");
+		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Sucessfully loaded OpenGL libraries.", "info.openGL");
 		
 		glDisable(GL_DEPTH_TEST);
 	}
@@ -75,8 +75,7 @@ public class GL_Game
 	//The game loop.
 	private static void gameLoop()
 	{
-		
-		Logger.getAnonymousLogger().log(Level.INFO, "Gameloop started...", "info.window");
+		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Gameloop started...", "info.window");
 		while(!Display.isCloseRequested())
 		{
 			//Drawing Loop

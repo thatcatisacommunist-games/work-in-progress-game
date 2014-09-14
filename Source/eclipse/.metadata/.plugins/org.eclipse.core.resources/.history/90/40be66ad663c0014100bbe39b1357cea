@@ -32,7 +32,6 @@ public class GL_Game
 	private static void trashRemove() 
 	{
 		Display.destroy();
-		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Destroyed DISPLAY, exitting program...", "info.window");
 	}
 
 	
@@ -46,7 +45,7 @@ public class GL_Game
 		
 		glClearColor(0,0,0,1);
 		
-		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Sucessfully loaded OpenGL libraries....", "info.openGL");
+		Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Sucessfully loaded OpenGL libraries.", null);
 		
 		glDisable(GL_DEPTH_TEST);
 	}
@@ -56,7 +55,6 @@ public class GL_Game
 	{
 		try
 		{
-			Logger.getLogger(GL_Game.class.getName()).log(Level.INFO, "Sucessfully initialized Display....", "info.window");
 			Display.setDisplayMode(new DisplayMode(500,500));
 			Display.setResizable(true);
 			Display.create();
@@ -75,8 +73,6 @@ public class GL_Game
 	//The game loop.
 	private static void gameLoop()
 	{
-		
-		Logger.getAnonymousLogger().log(Level.INFO, "Gameloop started...", "info.window");
 		while(!Display.isCloseRequested())
 		{
 			//Drawing Loop
