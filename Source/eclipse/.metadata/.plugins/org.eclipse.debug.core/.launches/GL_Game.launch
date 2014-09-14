@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/GL_Space_Game/src/GL_Game.java"/>
+<listEntry value="/GL_Space_Game/src/moedream/engine/GL_Game.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="GL_Game"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="moedream.engine.GL_Game"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="GL_Space_Game"/>
 </launchConfiguration>
