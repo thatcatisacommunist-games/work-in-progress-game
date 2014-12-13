@@ -15,7 +15,7 @@ import static org.lwjgl.opengl.GL11.*;
 public class GameLoops 
 {
 	GameStates.GameState gameState = GameStates.GameState.FirstUpdate;
-	
+	Sound sound;
 	
 	
 	//The loops which handles drawing.
@@ -23,8 +23,11 @@ public class GameLoops
 	{
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-		
-		if (gameState == GameStates.GameState.LoadScreen)
+		if (gameState == GameStates.GameState.FirstUpdate)
+		{
+			
+		}
+		else if (gameState == GameStates.GameState.LoadScreen)
 		{
 			
 		}
@@ -38,7 +41,7 @@ public class GameLoops
 		}
 		else
 		{
-			Logger.getAnonymousLogger().log(Level.INFO, "GameState (Draw) returned an invalid value, changing to: " + GameStates.GameState.MainMenu.toString(), "info.window");
+			Logger.getAnonymousLogger().log(Level.INFO, "GameState (Draw) returned an invalid value(" + gameState.toString() + ") changing to: " + GameStates.GameState.MainMenu.toString(), "info.window");
 		}
 		
 		
@@ -60,8 +63,9 @@ public class GameLoops
 	{
 		if (gameState == GameStates.GameState.FirstUpdate)
 		{
-		
-			
+			sound = new Sound("res/credits", "WAV");
+			sound.playSoundAsMusic(1.0f, 1.0f, true);
+			//sound.stop();
 			changeState(GameStates.GameState.LoadScreen);
 		}
 		else if (gameState == GameStates.GameState.Intro)
@@ -70,7 +74,9 @@ public class GameLoops
 		}
 		else if (gameState == GameStates.GameState.LoadScreen)
 		{
-			changeState(GameStates.GameState.GameScreen);
+			
+			//sound.playSoundAsMusic(0.5f, 1.0f, false);
+			//changeState(GameStates.GameState.GameScreen);
 		}
 		else if (gameState == GameStates.GameState.MainMenu)
 		{
