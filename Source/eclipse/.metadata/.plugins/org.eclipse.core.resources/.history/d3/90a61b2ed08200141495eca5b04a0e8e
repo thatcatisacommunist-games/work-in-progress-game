@@ -1,0 +1,39 @@
+package moedream.baseSystem;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import moedream.baseSystem.*;
+import org.lwjgl.LWJGLException;
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+import static org.lwjgl.opengl.GL11.*;
+
+
+public class GameEngine 
+{
+	GameStates.GameState gameState = GameStates.GameState.FirstUpdate;
+	
+	
+	
+	
+	//The loops which handles drawing.
+	public static void Draw()
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+		
+		//TODO: Add code here for drawing
+		
+		Display.update();
+	}
+	
+	
+	//The loop which handles In-Game logic.
+	public static void Update()
+	{
+		
+		
+		//TODO: Add code here for logic
+	}
+}
