@@ -18,6 +18,7 @@ public class GameLoops
 	
 	
 	
+	
 	//The loops which handles drawing.
 	public void Draw()
 	{
@@ -63,10 +64,6 @@ public class GameLoops
 		
 			
 			changeState(GameStates.GameState.LoadScreen);
-		}
-		else if (gameState == GameStates.GameState.Intro)
-		{
-			
 		}
 		else if (gameState == GameStates.GameState.LoadScreen)
 		{
