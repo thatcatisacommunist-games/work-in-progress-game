@@ -1,0 +1,97 @@
+package moedream.baseSystem;
+
+import java.io.IOException;
+
+import org.lwjgl.opengl.GL11;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
+import org.newdawn.slick.util.ResourceLoader;
+
+public class GameObject 
+{
+	private float X, Y; // Positions
+	private float width, height;
+	private boolean doDraw, doesHaveTexture;
+	private Texture spriteTexture;
+	public Rectangle hitbox;
+	
+	public GameObject(String texture, float x, float y)
+	{
+		try 
+		{
+			spriteTexture = TextureLoader.getTexture("PNG", ResourceLoader.getResourceAsStream(texture + ".png"));
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public GameObject(float x, float y, float width, float height)
+	{
+		try 
+		{
+			spriteTexture = TextureLoader.getTexture("PNG", ResourceLoader.getResourceAsStream("notfound.png"));
+		} 
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	public void setX(float xPos)
+	{
+		X = xPos;
+	}
+	public void setY(float yPos)
+	{
+		Y = yPos;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/**<NEWLINE>
+	 * Don't do it...
+	 */
+	public static void showHentai()
+	{
+		boolean hentai = true;
+		while (hentai)
+			System.out.println("Keep this dirty shit, out of me! \nYou pervert!");
+	}
+	
+	public void Draw()
+	{
+	       Color.white.bind();
+	        spriteTexture.bind(); // or GL11.glBind(texture.getTextureID());
+	        if (spriteTexture == null)
+	        	System.out.println("Texture bind failed.");
+	        
+	        GL11.glBegin(GL11.GL_QUADS);
+	            GL11.glTexCoord2f(0,0);
+	            GL11.glVertex2f(X,Y);
+	            GL11.glTexCoord2f(1,0);
+	            GL11.glVertex2f(X+spriteTexture.getTextureWidth(),Y);
+	            GL11.glTexCoord2f(0,1);
+	            GL11.glVertex2f(X+spriteTexture.getTextureWidth(),Y+spriteTexture.getTextureHeight());
+	            GL11.glTexCoord2f(0,1);
+	            GL11.glVertex2f(X,Y+spriteTexture.getTextureHeight());
+	            System.out.println("Drawing complete.");
+	        GL11.glEnd();
+	        
+	}
+	
+	
+}

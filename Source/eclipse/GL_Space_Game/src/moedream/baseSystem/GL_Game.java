@@ -6,6 +6,7 @@ import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
+import org.lwjgl.opengl.GL11;
 import org.newdawn.slick.*;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -38,11 +39,11 @@ public class GL_Game
 	//Initiate OpenGL.
 	private static void initGL() 
 	{
-		
+		GL11.glEnable(GL11.GL_TEXTURE_2D);
 		//Prepare projection matrix.
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
-		glOrtho(0,Display.getWidth(), 0, Display.getHeight(), 2, 1); //Remember to draw at 1, else it will be reversed.
+		glOrtho(0,Display.getWidth(), Display.getHeight(), 0, 1, -1); //Remember to draw at 1, else it will be reversed.
 		glMatrixMode(GL_MODELVIEW);
 		
 		//Set the color, to black.

@@ -20,4 +20,5 @@
 <fullyQualifiedTypeName name="moedream.baseSystem.GameStates"/>
 <fullyQualifiedTypeName name="moedream.baseSystem.GameStates.GameState"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.openal.SoundStore"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.opengl.Texture"/>
 </qualifiedTypeNameHistroy>
