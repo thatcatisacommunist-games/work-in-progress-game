@@ -1,0 +1,49 @@
+package tciacgames.gui.Addons;
+
+import java.awt.font.*;
+import java.io.InputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.newdawn.slick.TrueTypeFont;
+import org.newdawn.slick.util.ResourceLoader;
+
+
+
+public class Font 
+{
+	TrueTypeFont font;
+	
+	public Font(String fontName, boolean doAntiAlias)
+	{
+		java.awt.Font defaultFont = new java.awt.Font(fontName, 0, 24);
+		font = new TrueTypeFont(defaultFont, doAntiAlias);
+	}
+	
+	public Font(String fontPlacement, float fontSize, boolean doAntiAlias)
+	{
+		try
+		{
+			InputStream input = ResourceLoader.getResourceAsStream(fontPlacement + ".ttf");
+			java.awt.Font builderFont = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, input);
+			builderFont = builderFont.deriveFont(fontSize);
+			font = new TrueTypeFont(builderFont, doAntiAlias)
+		}
+		catch (Exception ex)
+		{
+			Logger.getLogger("tciacgames Fonts").log(Level.WARNING, "Could not load font!");
+		}
+	}
+	
+	
+	public TrueTypeFont getFont()
+	{
+		return font;
+	}
+	
+	public void drawFont(float x, float y, String text)
+	{
+		font.drawString(x, y, text);
+	}
+	
+}

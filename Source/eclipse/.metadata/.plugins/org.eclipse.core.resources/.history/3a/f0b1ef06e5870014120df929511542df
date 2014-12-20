@@ -1,0 +1,6 @@
+package tciacgames.baseSystem;
+
+public class GUIContents 
+{
+
+}

@@ -1,6 +1,6 @@
 package tciacgames.baseSystem;
 
-public class InventoryContainer 
+public class InventoryContainer extends ItemCollections
 {
 	Item[] contents;
 	int inventoryIndex;

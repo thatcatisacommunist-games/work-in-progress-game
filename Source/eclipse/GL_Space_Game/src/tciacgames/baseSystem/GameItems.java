@@ -6,51 +6,124 @@ public class GameItems extends ItemCollections
 {
 	//Items
 	Item items[];
+	
+	
+	int itemContainerID = -1;
+	String itemContainerName = "None";
+	
+	
 	int[] id = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	String[] name = new String[] 
 			{
-			"Flying Dutchmen's Spear",
-			"Flying Dutchmen's Sword", //Weapon 1
-			"Half Broken Wand", 
-			"The Slapper"
-			, "Extermination, Extermination.", 
-			"Desctruction Matrix", 
-			"Y Axis", 
-			"X Axis", 
-			"Z Axis", 
-			"Better Wand", 
-			"Half Working Helmet"
+				"Flying Dutchmen's Spear",
+				"Flying Dutchmen's Sword", //Weapon 1
+				"Half Broken Wand", 
+				"The Slapper",
+				"Extermination, Extermination.", 
+				"Desctruction Matrix", 
+				"Y Axis", 
+				"X Axis", 
+				"Z Axis", 
+				"Better Wand", 
+				"Half Working Helmet"
 			};
 	String[] tooltips = new String[] 
 			{
-			"And they said, the flying dutchman was awesome?!",
-			"It's an upgrade... Kinda.",
-			"Better than nothing i guess.",
-			"YO, YO, MADDAFAKAS!",
-			"Extermination, Extermination.",
-			"Looks like it comes from a different universe..",
-			"Extreme destruction.",
-			"- Replace with player Y axis -",
-			"Replace with player X Axis",
-			"Whatever. you know the deal.",
-			"Well, atleast it works better.",
-			"Congratulations, you look ridiculous."
+				"And they said, the flying dutchman was awesome?!",
+				"It's an upgrade... Kinda.",
+				"Better than nothing i guess.",
+				"YO, YO, MADDAFAKAS!",
+				"Extermination, Extermination.",
+				"Looks like it comes from a different universe..",
+				"Extreme destruction.",
+				"- Replace with player Y axis -",
+				"Replace with player X Axis",
+				"Whatever. you know the deal.",
+				"Well, atleast it works better.",
+				"Congratulations, you look ridiculous."
 			};
 	float[] weight = new float[]
 			{
-			
+				1.0f,
+				1.5f,
+				0.1f,
+				6.0f,
+				0.0f,
+				10.0f,
+				1.0f,
+				1.0f,
+				1.0f,
+				1.9f,
+				0.5f
 			};
+	float[] baseDamage = new float[]
+			{
+				1.0f * 2,
+				1.5f * 2,
+				0.1f * 2,
+				6.0f * 2,
+				0.0f * 2,
+				10.0f * 2,
+				1.0f * 2,
+				1.0f * 2,
+				1.0f * 2,
+				1.9f * 2,
+				0.5f * 2
+			};
+	int[] buff = new int[]
+			{
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0,
+				0
+			};
+	float[] maxDamage = new float[]
+			{
+				1.0f * 4,
+				1.5f * 4,
+				0.1f * 4,
+				6.0f * 4,
+				0.0f * 4,
+				10.0f * 5,
+				1.0f * 4,
+				1.0f * 4,
+				1.0f * 3,
+				1.9f * 8,
+				0.5f * 6
+			};
+	Texture[] texture = new Texture[]
+			{
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null,
+				null
+			};
+	
 	
 	public GameItems(String collectionName, int collectionID)
 	{
 		
 		
 	}
-	public void InitiateItems(int[] id, String[] name , String[] tooltips, float[] weight, float[] baseDamage, int[] buff, float[] maxDamage, Texture[] texture)
+	public void InitiateItems(Texture[] texture)
 	{
 		super.InitiateItems(id, name, tooltips, weight, baseDamage, buff, maxDamage, texture);
-		
-
+	}
+	public void getItem(int id)
+	{
+		super.getItem(id);
 	}
 		
 		

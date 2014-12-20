@@ -22,5 +22,9 @@ class ItemCollections
 		}
 		
 	}
+	public Item getItem(int id)
+	{
+		return items[id];
+	}
 	
 }
