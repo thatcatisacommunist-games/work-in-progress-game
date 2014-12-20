@@ -121,9 +121,9 @@ public class GameItems extends ItemCollections
 	{
 		super.InitiateItems(id, name, tooltips, weight, baseDamage, buff, maxDamage, texture);
 	}
-	public Item getItem(int id)
+	public void getItem(int id)
 	{
-		return super.getItem(id);
+		super.getItem(id);
 	}
 		
 		

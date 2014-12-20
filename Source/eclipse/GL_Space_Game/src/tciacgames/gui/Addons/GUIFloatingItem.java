@@ -1,0 +1,6 @@
+package tciacgames.gui.Addons;
+
+public class GUIFloatingItem 
+{
+
+}

@@ -8,8 +8,6 @@
 <fullyQualifiedTypeName name="java.awt.event.WindowAdapter"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.DisplayMode"/>
-<fullyQualifiedTypeName name="java.util.logging.Logger"/>
-<fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="org.lwjgl.LWJGLException"/>
 <fullyQualifiedTypeName name="GL_Game"/>
 <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
@@ -20,7 +18,16 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.openal.SoundStore"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.TextureLoader"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
 <fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
+<fullyQualifiedTypeName name="tciacgames.baseSystem.InventoryContainer"/>
+<fullyQualifiedTypeName name="tciacgames.baseSystem.Rectangle"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.TrueTypeFont"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="tciacgames.baseSystem.GUIContents"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.Texture"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Mouse"/>
 </qualifiedTypeNameHistroy>

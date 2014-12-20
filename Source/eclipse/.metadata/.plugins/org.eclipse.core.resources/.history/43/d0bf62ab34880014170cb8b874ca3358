@@ -31,7 +31,7 @@ public class Font
 		}
 		catch (Exception ex)
 		{
-			Logger.getLogger("Fonts").log(Level.WARNING, "Could not load font!");
+			Logger.getLogger("tciacgames Fonts").log(Level.WARNING, "Could not load font!");
 		}
 	}
 	
