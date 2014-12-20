@@ -1,0 +1,137 @@
+package tciacgames.baseSystem;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.lwjgl.LWJGLException;
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+import org.lwjgl.opengl.GL11;
+
+import tciacgames.baseSystem.*;
+import static org.lwjgl.opengl.GL11.*;
+
+
+public class GameLoops 
+{
+	GameStates.GameState gameState = GameStates.GameState.FirstUpdate;
+	Sound sound;
+	GameObject player;
+	float x = 0.0f, y = 0.0f;
+	
+	
+	//The loops which handles drawing.
+	/**<NEWLINE>
+	 * Game Loop, for drawing.
+	 */
+	public void Draw()
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+		
+		if (gameState == GameStates.GameState.FirstUpdate)
+		{
+			
+		}
+		else if (gameState == GameStates.GameState.LoadScreen)
+		{
+			//player.Draw();
+		}
+		else if (gameState == GameStates.GameState.MainMenu)
+		{
+			
+		}
+		else if (gameState == GameStates.GameState.GameScreen)
+		{
+			
+		}
+		else
+		{
+			Logger.getAnonymousLogger().log(Level.INFO, "GameState (Draw) returned an invalid value(" + gameState.toString() + ") changing to: " + GameStates.GameState.MainMenu.toString(), "info.window");
+		}
+		
+		
+		//TODO: Add code here for drawing
+		
+		Display.update();
+	}
+	
+	/**<NEWLINE>
+	 * Change the current GameState, of the game (Gamestates defines what the game is doing.)
+	 * @param state
+	 */
+	private void changeState(GameStates.GameState state)
+	{
+		Logger.getAnonymousLogger().log(Level.INFO, "Changed the state, from: " + gameState.toString() + " to: " + state.toString(), "info.window");
+		gameState = state;
+	}
+	
+	
+	//The loop which handles In-Game logic.
+	/**<NEWLINE>
+	 * Game Loop that Updates the game logic
+	 */
+	public void Update()
+	{
+		if (gameState == GameStates.GameState.FirstUpdate)
+		{
+			player = new GameObject("GameResources/textures/testPng", 0.0f, 0.0f);
+			
+			
+			//Sound pew = new Sound("res/sound/pew", "WAV");
+			//pew.playSoundAsDimentionalEffect(1.0f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(2.0f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.9f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.8f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.7f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.6f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.5f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.4f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.3f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.2f, 0.5f, 0, 0, 0, true);
+			//pew.playSoundAsDimentionalEffect(0.1f, 0.5f, 0, 0, 0, true);
+			
+			
+			
+			
+			sound = new Sound("GameResources/music/cred", "OGG");
+			sound.playSoundAsMusic(1.0f, 1.0f, true);
+			//sound.stop();
+			changeState(GameStates.GameState.LoadScreen);
+		}
+		else if (gameState == GameStates.GameState.Intro)
+		{
+			
+		}
+		else if (gameState == GameStates.GameState.LoadScreen)
+		{
+			GL11.glEnable(GL11.GL_BLEND);
+			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_BLEND_DST);
+			player.setX(x);
+			player.setY(y);
+			if (x >= Display.getWidth())
+				x = 0; y = 0;
+			x++; y++;
+			
+			//sound.playSoundAsMusic(0.5f, 1.0f, false);
+			//changeState(GameStates.GameState.GameScreen);
+		}
+		else if (gameState == GameStates.GameState.MainMenu)
+		{
+			
+		}
+		else if (gameState == GameStates.GameState.GameScreen)
+		{
+			
+		}
+		else
+		{
+			Logger.getAnonymousLogger().log(Level.INFO, "GameState (Update) returned an invalid value, changing to: " + GameStates.GameState.MainMenu.toString(), "info.window");
+		}
+		
+		
+		
+		
+		
+		//TODO: Add code here for logic
+	}
+}

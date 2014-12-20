@@ -12,13 +12,15 @@
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="org.lwjgl.LWJGLException"/>
 <fullyQualifiedTypeName name="GL_Game"/>
-<fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
 <fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.openal.AudioLoader"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
 <fullyQualifiedTypeName name="moedream.baseSystem.Sound"/>
 <fullyQualifiedTypeName name="moedream.baseSystem.GameStates"/>
 <fullyQualifiedTypeName name="moedream.baseSystem.GameStates.GameState"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.openal.SoundStore"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.opengl.TextureLoader"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.util.ResourceLoader"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.opengl.Texture"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,18 @@
+package tciacgames.baseSystem;
+
+public class Item 
+{
+	private float itemWeight;
+	
+	
+	
+	
+	
+	
+	
+	public float ItemWeight()
+	{
+		return itemWeight;
+	}
+	
+}
