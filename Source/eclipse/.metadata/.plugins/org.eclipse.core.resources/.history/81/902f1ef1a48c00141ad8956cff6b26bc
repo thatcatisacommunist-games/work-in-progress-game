@@ -50,7 +50,7 @@ public class GUIButton extends GUIContents
 		System.out.println(buttonName + " was pressed!, and is now returning TRUE.");
 		for (int i = 0; i < 100; i++)
 			isButtonClicked = true;
-		System.out.println(buttonName + " is now unpressed, and is now returning FALSE.");
+		System.out.println(buttonName + " is now unpressed, and is now returning FALSE.")
 		isButtonClicked = false;
 	}
 	
