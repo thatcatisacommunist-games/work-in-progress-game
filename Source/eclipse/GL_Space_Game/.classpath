@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry excluding="src/|GameResources/music/|GameResources/sound/|GameResources/textures/" kind="src" path=""/>
+	<classpathentry kind="src" path="GameResouces/levels"/>
 	<classpathentry kind="src" path="GameResources/music"/>
 	<classpathentry kind="src" path="GameResources/sound"/>
 	<classpathentry kind="src" path="GameResources/textures"/>
